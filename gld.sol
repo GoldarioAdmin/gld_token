@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 
 contract Goldario is ERC20, ERC20Burnable, Pausable, Ownable, ERC20Permit {
     constructor() ERC20("Goldario", "GLD") ERC20Permit("Goldario") {
-        _mint(msg.sender, 1000000 * 10**decimals());
+        _mint(msg.sender, 1000000000 * 10**decimals());
     }
 
     function pause() public onlyOwner {
